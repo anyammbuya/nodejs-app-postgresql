@@ -1,0 +1,48 @@
+**********| configurations |**************************
+
+Import the project directory in your home directory
+
+cd ~
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+source ~/.bashrc
+
+sudo apt install npm  //this may not be needed since we are already installing nvm
+
+nvm install 16
+nvm use 16
+
+npm install -g pm2  
+
+cd project-directory		// switch to the project directory
+
+npm install					// install packages listed in the package.json file
+
+npm install aws-sdk   //install aws sdk for javascript in the project folder
+
+npm install @aws-sdk/client-secrets-manager         //install aws sdk for secrets manager in project folder
+
+npm install pg        // install the pg package 
+
+node index.js									// run the app   
+						
+								OR use:
+
+pm2 start index.js      // to run the app
+
+pm2 logs				//check logs 
+
+*******| If youn want to connect using the postgresql client | ***********
+
+sudo apt-get install -y postgresql-client
+psql -h zeus-db-instance.cpo2sm6moz1z.us-east-2.rds.amazonaws.com -p 5432 -U foo postgres
+
+
+
+
+
+
+
+
+
+
+ 
